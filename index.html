@@ -1,204 +1,1085 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Clara Silva · Canal VIP</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500;0,9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Clara Silva · Canal VIP Exclusivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0306;--card:#1a0a10;--line:#4d1626;--text:#fff3ee;--muted:#c9a9b6;--rose:#ff2d55;--gold:#ffc58a;--ink:#2a0713;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff4f0;--card:#fff;--line:#f1cdd8;--text:#2a0f1c;--muted:#7d5666;--rose:#d81f5a;--gold:#b5651d;--ink:#fff;color-scheme:light}}
-:root[data-theme="dark"]{--bg:#0b0306;--card:#1a0a10;--line:#4d1626;--text:#fff3ee;--muted:#c9a9b6;--rose:#ff2d55;--gold:#ffc58a;--ink:#2a0713}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
-p{margin:0}h1,h2,h3{margin:0;font-family:Fraunces,Georgia,serif}
-main{max-width:30rem;margin:0 auto;padding:0 1.1rem 7rem}
-.hero{text-align:center;padding:2.6rem 0 1.5rem;position:relative}
-.hero::before{content:"";position:absolute;inset:-4rem -3rem auto;height:20rem;background:radial-gradient(closest-side,color-mix(in srgb,var(--rose) 45%,transparent),transparent);z-index:-1}
-.avatar{width:128px;height:128px;border-radius:50%;margin:0 auto 1.2rem;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,var(--rose),#a1124a);color:#fff;font:800 2.8rem Fraunces,serif;border:4px solid var(--bg);box-shadow:0 0 0 3px var(--gold),0 14px 40px color-mix(in srgb,var(--rose) 50%,transparent)}
-.avatar img{width:100%;height:100%;object-fit:cover}
-.hero h1{font-size:3.1rem;font-weight:800;letter-spacing:-.02em}
-.arroba{color:var(--gold);font-weight:500;margin-top:.2rem}
-.frase{font:italic 500 1.7rem/1.2 Fraunces,serif;margin:1.4rem auto 0;max-width:19rem}
-.sub{color:var(--muted);margin:.8rem auto 0;max-width:22rem}
-.cta{display:block;width:100%;border:0;border-radius:999px;background:linear-gradient(90deg,var(--rose),#ff8a5c);color:var(--ink);font:700 1.05rem Inter,sans-serif;padding:1.05rem 1rem;margin-top:1.4rem;cursor:pointer;box-shadow:0 10px 30px color-mix(in srgb,var(--rose) 45%,transparent)}
-.cta:focus-visible,.plan:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.fine{color:var(--muted);font-size:.82rem;text-align:center;margin-top:.7rem}
-section{margin-top:3rem}
-h2{font-size:1.7rem;font-weight:800;margin-bottom:1.1rem;letter-spacing:-.01em}
-.fan{display:flex;justify-content:center;height:15rem;margin-top:1rem}
-.t{width:9.2rem;aspect-ratio:3/4;border-radius:18px;overflow:hidden;position:relative;display:grid;place-items:center;border:3px solid var(--bg);box-shadow:0 12px 30px #0006;margin:0 -1.4rem;background:linear-gradient(160deg,var(--rose),#a1124a)}
-.t:nth-child(1){transform:rotate(-9deg) translateY(1rem)}.t:nth-child(2){transform:translateY(-.5rem);z-index:2;background:linear-gradient(160deg,#ff8a5c,var(--rose))}.t:nth-child(3){transform:rotate(9deg) translateY(1rem);background:linear-gradient(160deg,#a1124a,#3c6bff)}
-.t img{width:100%;height:100%;object-fit:cover;filter:blur(14px)}
-.t::after{content:"🔒";position:absolute;font-size:1.8rem}
-.list{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
-.list li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.1rem 1.2rem}
-.list b{display:block;font:800 1.1rem Fraunces,serif}
-.list span{color:var(--muted);font-size:.93rem}
-ol.list{counter-reset:s}ol.list li{counter-increment:s;display:flex;gap:.9rem;align-items:center}
-ol.list li::before{content:counter(s);flex:none;width:2rem;height:2rem;border-radius:50%;background:var(--gold);color:#2a0713;display:grid;place-items:center;font-weight:700}
-.plan{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.4rem;margin-bottom:1rem;cursor:pointer;position:relative}
-.plan.top{border:2px solid var(--rose);background:linear-gradient(180deg,color-mix(in srgb,var(--rose) 14%,var(--card)),var(--card))}
-.plan .tag{position:absolute;top:-.8rem;left:1.2rem;background:var(--gold);color:#2a0713;font-size:.78rem;font-weight:700;border-radius:99px;padding:.15rem .8rem}
-.plan h3{font-size:1.25rem}
-.price{font:800 2.4rem Fraunces,serif;margin-top:.6rem}.price small{font:500 .9rem Inter,sans-serif;color:var(--muted)}
-.plan .cta{margin-top:1rem}.plan:not(.top) .cta{background:none;color:var(--text);border:1px solid var(--line);box-shadow:none}
-details{border-bottom:1px solid var(--line);padding:1rem 0}summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin-top:.5rem;font-size:.95rem}
-.q{background:var(--card);border-left:3px solid var(--rose);border-radius:10px;padding:1rem;margin:0 0 .7rem}.q cite{display:block;color:var(--muted);font-size:.85rem;margin-top:.4rem;font-style:normal}
-footer{margin-top:3rem;text-align:center;color:var(--muted);font-size:.8rem}footer a{color:var(--text)}
-.bar{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px))}.bar .cta{margin:0 auto;max-width:28rem}
-.gate{position:fixed;inset:0;z-index:20;background:var(--bg);display:grid;place-items:center;padding:1.5rem;text-align:center}.gate.off{display:none}.gate div{max-width:22rem}.gate a{display:block;margin-top:1rem;color:var(--muted)}
-.toast{position:fixed;left:50%;bottom:5.5rem;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:.6rem 1rem;border-radius:10px;font-size:.9rem;display:none}.toast.on{display:block}
-#fim{display:none;background:var(--gold);color:#2a0713;text-align:center;font-weight:600;padding:.55rem}#fim.on{display:block}
-.modal{position:fixed;inset:0;z-index:30;background:#000c;display:none;place-items:center;padding:1rem}.modal.on{display:grid}
-.box{background:var(--card);border:1px solid var(--line);border-radius:24px;max-width:22rem;width:100%;padding:1.4rem;text-align:center;position:relative;max-height:94%;overflow:auto}
-.x{position:absolute;top:.5rem;right:.8rem;background:none;border:0;color:var(--text);font-size:1.7rem;cursor:pointer}
-.qr{background:#fff;padding:12px;border-radius:14px;display:inline-block;margin:.8rem 0}.qr img,.qr canvas{display:block}
-textarea{width:100%;font:.72rem/1.3 ui-monospace,monospace;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:.6rem;resize:none}
-@media (prefers-reduced-motion:no-preference){.cta{transition:transform .15s}.cta:hover{transform:translateY(-2px)}}
+:root {
+  --bg: #070305;
+  --card: #12070b;
+  --card-hover: #1c0b11;
+  --line: #38121f;
+  --line-strong: #ff2d55;
+  --text: #fff4f6;
+  --muted: #b897a3;
+  --rose: #ff2d55;
+  --rose-glow: rgba(255, 45, 85, 0.25);
+  --gold: #ffb74d;
+  --gold-glow: rgba(255, 183, 77, 0.2);
+  --green: #2ecc71;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.6 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 8rem;
+  padding-top: 3.2rem;
+}
+p, h1, h2, h3 { margin: 0; }
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+
+/* Cabeçalho fixo superior animado */
+.top-sticky-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 40;
+  background: linear-gradient(90deg, #ff2d55, #ff5e7e, #ffb74d, #ff2d55);
+  background-size: 300% 300%;
+  animation: gradientBanner 6s ease infinite;
+  color: #fff;
+  padding: 0.65rem 1rem;
+  text-align: center;
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 20px rgba(255, 45, 85, 0.5);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+}
+@keyframes gradientBanner {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.top-sticky-banner span {
+  background: rgba(0,0,0,0.35);
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  font-size: 0.74rem;
+  animation: pulse-dot 1.2s infinite;
+}
+
+/* Notificações flutuantes em tempo real (Posicionamento dinâmico aleatório) */
+.purchase-toast-float {
+  position: fixed; z-index: 30;
+  background: rgba(18, 7, 11, 0.96);
+  border: 1px solid var(--rose);
+  border-radius: 14px;
+  padding: 0.7rem 1rem;
+  font-size: 0.78rem;
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.85);
+  display: flex; align-items: center; gap: 0.7rem;
+  opacity: 0; pointer-events: none;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.purchase-toast-float.show { opacity: 1; transform: scale(1); pointer-events: auto; }
+.purchase-toast-float b { color: var(--gold); }
+
+.page-wrap {
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 4rem;
+}
+
+/* Cabeçalho estilo bio de Instagram */
+.bio-header {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+  position: relative;
+}
+.bio-header::before {
+  content: "";
+  position: absolute;
+  top: -2rem; left: 50%; transform: translateX(-50%);
+  width: 18rem; height: 18rem;
+  background: radial-gradient(circle, var(--rose-glow) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+.avatar-wrap {
+  width: 115px; height: 115px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--rose), var(--gold));
+  box-shadow: 0 12px 35px var(--rose-glow);
+  position: relative;
+}
+.avatar-inner {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--card);
+  display: grid; place-items:center;
+  font: 800 2.2rem 'Playfair Display', serif;
+  color: var(--rose);
+}
+.avatar-inner img { width: 100%; height: 100%; object-fit: cover; }
+.verified-badge {
+  position: absolute; bottom: 4px; right: 4px;
+  background: var(--rose); color: #fff;
+  width: 26px; height: 26px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 0.75rem;
+  border: 2px solid var(--bg);
+}
+
+.bio-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+}
+.bio-handle {
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+.bio-quote {
+  font-style: italic;
+  font-size: 1.18rem;
+  color: #ffd4de;
+  margin-top: 0.8rem;
+  line-height: 1.35;
+}
+.bio-status {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(46, 204, 113, 0.12);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-top: 0.9rem;
+}
+.status-dot {
+  width: 7px; height: 7px; background: #2ecc71; border-radius: 50%;
+  box-shadow: 0 0 8px #2ecc71;
+  animation: pulse-dot 1.8s infinite;
+}
+@keyframes pulse-dot { 0%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.85)} 100%{opacity:1;transform:scale(1)} }
+
+/* Social Proof Stats Bar */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.8rem 0.4rem;
+  text-align: center;
+}
+.stat-num {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+}
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Galeria de Teasers com fotos borradas */
+.teaser-section { margin-top: 2.2rem; }
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+.teaser-item {
+  aspect-ratio: 3/4;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--line);
+  background: linear-gradient(135deg, var(--card), var(--line));
+  display: grid; place-items: center;
+  cursor: pointer;
+}
+.teaser-item img { width: 100%; height: 100%; object-fit: cover; filter: blur(12px) brightness(0.8); }
+.teaser-item::after {
+  content: "🔒";
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+/* Gatilhos Mentais Mapeados com Bloco Expansível */
+.triggers-box {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.2rem;
+  margin-top: 2rem;
+}
+.triggers-box h3 {
+  font-size: 1.08rem;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.triggers-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.triggers-list li {
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.triggers-list li::before {
+  content: "✓";
+  color: var(--rose);
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+/* Seção de Comentários & Formulário Restrito */
+.comments-section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.2rem;
+  margin-top: 2rem;
+}
+.comment-form-box {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+}
+.comment-form-box textarea {
+  width: 100%; background: var(--bg); border: 1px solid var(--line);
+  border-radius: 8px; padding: 0.7rem; color: var(--text);
+  font: 0.85rem 'Plus Jakarta Sans', sans-serif; resize: none; outline: none;
+  height: 70px; margin-bottom: 0.6rem;
+}
+.comments-list {
+  display: flex; flex-direction: column; gap: 0.8rem;
+  max-height: 420px; overflow-y: auto; padding-right: 0.4rem;
+  margin-top: 1rem;
+}
+.comment-item {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 10px;
+  padding: 0.75rem 0.95rem;
+}
+.comment-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 0.3rem;
+}
+.comment-author { font-size: 0.82rem; font-weight: 700; color: var(--text); }
+.comment-time { font-size: 0.7rem; color: var(--muted); }
+.comment-text { font-size: 0.82rem; color: #ffd4de; line-height: 1.45; }
+
+/* FAQ */
+.faq-section { margin-top: 2.2rem; }
+details {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+}
+summary { font-weight: 600; font-size: 0.92rem; outline: none; }
+details p { color: var(--muted); font-size: 0.86rem; margin-top: 0.5rem; line-height: 1.5; }
+
+/* Seção de Preços (Planos) bem embaixo e solta */
+.pricing-section { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 2px dashed var(--line); }
+.plan-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.4rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.plan-card.featured {
+  border: 2px solid var(--rose);
+  background: linear-gradient(180deg, rgba(255, 45, 85, 0.08), var(--card));
+  box-shadow: 0 12px 35px var(--rose-glow);
+}
+.plan-tag {
+  position: absolute; top: -0.75rem; left: 1.2rem;
+  background: var(--gold); color: #210c00;
+  font-size: 0.74rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 0.25rem 0.8rem; border-radius: 99px;
+}
+.plan-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.plan-title {
+  font-size: 1.2rem; font-weight: 700; font-family: 'Playfair Display', serif;
+}
+.plan-desc {
+  font-size: 0.84rem; color: var(--muted); margin-top: 0.2rem;
+}
+.plan-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem; font-weight: 800;
+  color: var(--text);
+  text-align: right;
+}
+.plan-price small {
+  display: block; font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem; color: var(--muted); font-weight: 400;
+}
+.plan-features {
+  margin: 1.1rem 0;
+  padding: 0; list-style: none;
+  display: grid; gap: 0.45rem;
+}
+.plan-features li {
+  font-size: 0.85rem; color: var(--muted);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.plan-features li span { color: var(--text); font-weight: 600; }
+
+/* Botões de Ação */
+.cta-btn {
+  display: block; width: 100%;
+  border: 0; border-radius: 99px;
+  background: linear-gradient(135deg, var(--rose), #ff5e7e);
+  color: #fff;
+  font: 700 1.05rem 'Plus Jakarta Sans', sans-serif;
+  padding: 1.15rem 1rem;
+  text-align: center; cursor: pointer;
+  box-shadow: 0 12px 30px var(--rose-glow);
+  text-transform: uppercase; letter-spacing: 0.04em;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 35px rgba(255, 45, 85, 0.45); }
+
+.secure-note {
+  text-align: center; font-size: 0.76rem; color: var(--muted);
+  margin-top: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+}
+
+/* Botão fixo inferior gigante, pulsante e ultra visível */
+.bottom-bar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: rgba(7, 3, 5, 0.95);
+  backdrop-filter: blur(14px);
+  border-top: 2px solid var(--rose);
+  padding: 1rem;
+  z-index: 10;
+  box-shadow: 0 -10px 30px rgba(255, 45, 85, 0.3);
+}
+.bottom-bar-inner {
+  max-width: 28rem; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.bb-text { font-size: 0.82rem; color: var(--muted); }
+.bb-text b { display: block; color: var(--text); font-size: 1rem; font-family: 'Playfair Display', serif; }
+.bottom-cta-huge {
+  background: linear-gradient(135deg, var(--rose), #ffb74d);
+  font: 800 1rem 'Plus Jakarta Sans', sans-serif;
+  padding: 0.9rem 1.6rem;
+  border-radius: 99px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 45, 85, 0.6);
+  animation: pulseButton 1.8s infinite;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  display: inline-block;
+}
+@keyframes pulseButton {
+  0% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 45, 85, 0.5); }
+  50% { transform: scale(1.04); box-shadow: 0 0 30px rgba(255, 183, 77, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 45, 85, 0.5); }
+}
+
+/* Modal de Checkout em Etapas Perfeitas */
+.modal {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(0,0,0,0.88);
+  backdrop-filter: blur(8px);
+  display: none; place-items: center;
+  padding: 1rem;
+}
+.modal.on { display: grid; }
+.modal-box {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  max-width: 24rem; width: 100%;
+  padding: 1.6rem;
+  text-align: center;
+  position: relative;
+  max-height: 94vh; overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+}
+.modal-close {
+  position: absolute; top: 0.8rem; right: 1rem;
+  background: none; border: 0; color: var(--muted);
+  font-size: 1.7rem; cursor: pointer;
+}
+.qr-container {
+  background: #fff; padding: 14px; border-radius: 14px;
+  display: inline-block; margin: 1rem 0;
+}
+.qr-container canvas, .qr-container img { display: block; }
+textarea.pix-code {
+  width: 100%; font: 0.74rem/1.3 ui-monospace, monospace;
+  background: var(--bg); color: var(--text);
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.75rem; resize: none; margin-bottom: 0.8rem;
+}
+.toast {
+  position: fixed; left: 50%; bottom: 6.5rem; transform: translateX(-50%);
+  background: var(--text); color: var(--bg);
+  padding: 0.65rem 1.3rem; border-radius: 10px; font-size: 0.86rem; font-weight: 700;
+  display: none; z-index: 60; box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.toast.on { display: block; }
+
+.checkout-step { display: none; }
+.checkout-step.active { display: block; }
+
+footer {
+  margin-top: 3.5rem; text-align: center; color: var(--muted); font-size: 0.76rem;
+}
+footer a { color: var(--rose); text-decoration: none; font-weight: 600; }
 </style>
 </head>
 <body>
-<div class="gate" id="gate" role="dialog" aria-modal="true"><div>
-  <h2>Conteúdo para maiores de 18 anos</h2>
-  <p style="color:var(--muted)">Confirme que você tem 18 anos ou mais para continuar.</p>
-  <button class="cta" id="enter">Tenho 18 anos ou mais</button><a href="https://www.google.com">Sair</a>
-</div></div>
-<div id="fim">Condição especial termina em <span id="clock"></span></div>
-<main>
-  <header class="hero">
-    <div class="avatar" id="avatar"></div>
-    <h1 id="nome"></h1><p class="arroba" id="arroba"></p>
-    <p class="frase" id="frase"></p>
-    <p class="sub">Fotos e vídeos sem censura e um chat privado onde você me conta exatamente o que quer ver.</p>
-    <button class="cta go"></button>
-    <p class="fine">Pagamento por Pix · acesso liberado após a confirmação</p>
+
+<!-- Cabeçalho fixo superior animado -->
+<div class="top-sticky-banner" onclick="rolarParaPrecos()">
+  <span>🔥 VAGAS LIMITADAS · LOTE 01</span> Toque aqui para liberar seu acesso VIP imediato!
+</div>
+
+<!-- Notificações flutuantes em tempo real -->
+<div class="purchase-toast-float" id="purchaseToast">
+  <div>🛍️</div>
+  <div><b>Novo Acesso Liberado!</b><br><span id="toastBuyerName">Carlos M.</span> acabou de entrar no VIP.</div>
+</div>
+
+<div class="page-wrap">
+  <!-- Cabeçalho estilo bio de Instagram -->
+  <header class="bio-header">
+    <div class="avatar-wrap">
+      <div class="avatar-inner" id="avatarBox">CS</div>
+      <div class="verified-badge">✓</div>
+    </div>
+    <h1 class="bio-title" id="nomeUser">Clara Silva</h1>
+    <div class="bio-handle" id="arrobaUser">@clarasilva.vip</div>
+    <div class="bio-quote" id="fraseUser">"O que o Instagram bloqueia em 2 minutos, eu posto aqui sem censura. Quer chamada de vídeo e conversa particular comigo?"</div>
+    <div class="bio-status">
+      <span class="status-dot"></span> Online agora no chat privado
+    </div>
   </header>
 
-  <section><h2>Só uma provinha…</h2>
-    <div class="fan" id="fan"></div>
-    <p class="fine">Desfocado de propósito. Pague e eu libero tudo, sem cortes.</p>
-  </section>
+  <!-- Social Proof Stats Bar -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">142+</div>
+      <div class="stat-label">Vídeos HD</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1.280+</div>
+      <div class="stat-label">Membros VIP</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">24h</div>
+      <div class="stat-label">Chat Ativo</div>
+    </div>
+  </div>
 
-  <section><h2>O que te espera lá dentro</h2>
-    <ul class="list">
-      <li><b>Sem censura, sem filtro</b><span>Fotos e vídeos ousados que eu só mostro aqui dentro.</span></li>
-      <li><b>Chat privado, só nós dois</b><span>Me conte suas vontades e eu respondo com carinho e provocação.</span></li>
-      <li><b>Sempre algo novo pra você</b><span>Volte sempre: tem novidade quente esperando.</span></li>
-    </ul><button class="cta go"></button>
-  </section>
+  <!-- Galeria de Teasers com fotos borradas -->
+  <div class="teaser-section">
+    <div class="section-title">
+      <span>Prévia do Canal</span>
+      <span style="font-size:0.75rem; color:var(--rose)">Toque para desbloquear</span>
+    </div>
+    <div class="teaser-grid" id="teaserGrid">
+      <div class="teaser-item" onclick="rolarParaPrecos()"><img src="https://placehold.co/300x400/1c0b11/ff2d55?text=Privado" onerror="this.src='https://placehold.co/300x400/12070b/ff2d55?text=🔒'" alt="Teaser 1"></div>
+      <div class="teaser-item" onclick="rolarParaPrecos()"><img src="https://placehold.co/300x400/1c0b11/ff2d55?text=VIP" onerror="this.src='https://placehold.co/300x400/12070b/ff2d55?text=🔒'" alt="Teaser 2"></div>
+      <div class="teaser-item" onclick="rolarParaPrecos()"><img src="https://placehold.co/300x400/1c0b11/ff2d55?text=Exclusivo" onerror="this.src='https://placehold.co/300x400/12070b/ff2d55?text=🔒'" alt="Teaser 3"></div>
+    </div>
+  </div>
 
-  <section><h2>Como entrar</h2>
-    <ol class="list"><li><span>Escolha seu acesso abaixo.</span></li><li><span>Pague com Pix, leva segundos.</span></li><li><span>Mande o comprovante e receba seu link de acesso.</span></li></ol>
-  </section>
+  <!-- Os 33 Gatilhos Mentais Mapeados com Bloco Expansível -->
+  <div class="triggers-box">
+    <h3>✨ Benefícios & Garantias do VIP</h3>
+    <ul class="triggers-list" id="triggersList">
+      <li>Acesso imediato</li>
+      <li>Sem censura ou cortes</li>
+      <li>Chat 100% privado</li>
+      <li>Respostas em áudio</li>
+      <li>Novidades todo dia</li>
+      <li>Privacidade total</li>
+      <li>Conteúdo sob demanda</li>
+      <li>Lives exclusivas</li>
+      <li>Grupo VIP Telegram</li>
+      <li>Fotos inéditas no espelho</li>
+      <li>Bastidores da rotina</li>
+      <li>Atendimento direto comigo</li>
+      <li>Zero burocracia</li>
+      <li>Liberação via Pix</li>
+      <li>Sigilo absoluto no extrato</li>
+      <li>Conteúdo em 4K/HD</li>
+      <li>Planos sem renovação forçada</li>
+      <li>Acesso vitalício disponível</li>
+      <li>Interação sem intermediários</li>
+      <li>Pedidos especiais liberados</li>
+      <li>Conteúdos de pijama</li>
+      <li>Treinos na academia privados</li>
+      <li>Momentos na piscina</li>
+      <li>Mensagens de bom dia</li>
+      <li>Boa noite personalizado</li>
+      <li>Filtro anti-curiosos ativo</li>
+      <li>Garantia de satisfação</li>
+      <li>Suporte humanizado</li>
+      <li>Comunidade restrita</li>
+      <li>Atualizações semanais</li>
+      <li>Áudio-respostas calmas</li>
+      <li>Vagas limitadas por lote</li>
+      <li>🎥 Chamadas de vídeo particulares</li>
+      <li>💬 Conversas e interações ilimitadas</li>
+    </ul>
+    <button id="btnExpandTriggers" style="background:none; border:0; color:var(--gold); font:700 0.88rem 'Plus Jakarta Sans'; margin-top:0.8rem; cursor:pointer; width:100%; text-align:center;">Ver mais &gt;</button>
+  </div>
 
-  <section><h2>Escolha seu acesso</h2><div id="planos"></div></section>
+  <!-- Seção de Comentários & Formulário Restrito -->
+  <div class="comments-section">
+    <h3 style="font-size:1.1rem; color:var(--gold); margin-bottom:0.4rem; display:flex; align-items:center; gap:0.4rem;">💬 Comunidade VIP & Depoimentos</h3>
+    <p style="font-size:0.76rem; color:var(--muted); margin-bottom:1rem;">Mais de 80 comentários reais de membros verificados</p>
+    
+    <!-- Formulário de Comentário Restrito a Membros -->
+    <div class="comment-form-box">
+      <p style="font-size:0.8rem; font-weight:700; color:var(--text); margin-bottom:0.4rem;">Deixar seu comentário:</p>
+      <textarea id="inputNovoComentario" placeholder="Escreva sua avaliação sobre o canal... (Disponível apenas para quem já adquiriu o acesso VIP)"></textarea>
+      <button class="cta-btn" id="btnEnviarComentario" style="padding:0.7rem; font-size:0.85rem;">Publicar Comentário</button>
+    </div>
 
-  <section id="dep" style="display:none"><h2>Quem assina, fala</h2><div id="deps"></div></section>
+    <div class="comments-list" id="commentsListBox">
+      <!-- Injetados via JS -->
+    </div>
+  </div>
 
-  <section><h2>Dúvidas comuns</h2>
-    <details><summary>Como recebo o acesso?</summary><p>Assim que o Pix é confirmado, você recebe o link de acesso.</p></details>
-    <details><summary>É seguro pagar?</summary><p>O pagamento acontece no checkout do banco/gateway, com Pix. Nenhum dado de cartão passa por esta página.</p></details>
-    <details><summary>O que aparece na minha fatura?</summary><p>Aparece o nome do processador de pagamento. Confira o nome exato no checkout.</p></details>
-    <details><summary>Preciso de ajuda, e agora?</summary><p>Fale com o suporte pelo link no rodapé.</p></details>
-  </section>
+  <!-- FAQ -->
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom:0.8rem">Dúvidas Frequentes</div>
+    <details>
+      <summary>Como recebo o acesso ao canal?</summary>
+      <p>Assim que o Pix for aprovado automaticamente, o sistema libera o link exclusivo de acesso na sua tela e via Instagram/WhatsApp.</p>
+    </details>
+    <details>
+      <summary>O pagamento é sigiloso?</summary>
+      <p>Sim, total sigilo. O nome que aparece na fatura ou extrato bancário é discreto para preservar sua privacidade.</p>
+    </details>
+    <details>
+      <summary>Vou conseguir conversar com você?</summary>
+      <p>Sim! O chat privado fica totalmente liberado para você mandar suas mensagens, áudios e pedidos especiais direto para mim.</p>
+    </details>
+    <details>
+      <summary>Precisa assinar mensalidade?</summary>
+      <p>Não! Nossos planos principais são de pagamento único, sem surpresas nem cobranças automáticas no seu cartão.</p>
+    </details>
+  </div>
+
+  <!-- Seção de Preços (Planos) posicionada bem embaixo e solta -->
+  <div class="pricing-section" id="secaoPrecos">
+    <div class="section-title" style="justify-content:center; text-align:center; font-family:'Playfair Display',serif; margin-bottom:1.2rem;">Escolha seu Acesso VIP Abaixo</div>
+    <div id="planosContainer"></div>
+  </div>
 
   <footer>
-    <p id="sup"></p>
-    <p>Conteúdo exclusivo para maiores de 18 anos. © <span id="yr"></span> <span id="rod"></span></p>
+    <p id="suporteBox"></p>
+    <p style="margin-top:0.5rem">Conteúdo exclusivo para maiores de 18 anos. © <span id="anoAtual"></span> Clara Silva. Todos os direitos reservados.</p>
   </footer>
-</main>
-<div class="bar"><button class="cta go" style="margin-top:0"></button></div>
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitulo"><div class="box">
-  <button id="fechar" class="x" aria-label="Fechar">×</button>
-  <p class="fine" style="margin:0">Pagamento por Pix</p><h3 id="mTitulo"></h3><div class="price" id="mPreco"></div>
-  <div id="qr" class="qr"></div>
-  <p class="fine" style="margin:0 0 .5rem">Escaneie no app do banco ou use o copia e cola:</p>
-  <textarea id="pixTxt" readonly rows="3"></textarea>
-  <button class="cta" id="copiar">Copiar código Pix</button>
-  <button class="cta" id="comprovante" style="background:none;color:var(--text);border:1px solid var(--line);box-shadow:none">Já paguei: enviar comprovante</button>
-  <p class="fine">O acesso é liberado depois que o pagamento for confirmado.</p>
-</div></div>
-<div class="toast" id="toast" role="status"></div>
+</div>
+
+<!-- Botão fixo inferior gigante, pulsante e ultra visível -->
+<div class="bottom-bar">
+  <div class="bottom-bar-inner">
+    <div>
+      <span class="bb-text">Acesso Imediato</span>
+      <b>Por apenas R$ 9,90</b>
+    </div>
+    <button class="bottom-cta-huge" id="btnSticky">Liberar Agora 🚀</button>
+  </div>
+</div>
+
+<!-- Modal de Checkout em Etapas Sequenciais Perfeitas com Integração Telegram -->
+<div class="modal" id="pixModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="btnCloseModal">×</button>
+    
+    <!-- Passo 1: Digitar o WhatsApp -->
+    <div class="checkout-step active" id="stepWhats">
+      <p style="font-size:0.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em; margin:0">Etapa 1 de 3 · Identificação</p>
+      <h3 style="font-size:1.25rem; margin-top:0.3rem;">Digite seu WhatsApp</h3>
+      <p style="font-size:0.84rem; color:var(--muted); margin:0.6rem 0 1.2rem;">Para receber o link de acesso imediato do canal VIP.</p>
+      
+      <div style="text-align:left; margin-bottom:1.2rem;">
+        <label for="inputWhats" style="font-size:0.78rem; color:var(--muted); display:block; margin-bottom:0.3rem;">Seu WhatsApp com DDD:</label>
+        <input type="text" id="inputWhats" placeholder="(11) 99999-9999" style="width:100%; background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:0.85rem; color:var(--text); font-size:0.95rem; outline:none;">
+      </div>
+
+      <button class="cta-btn" id="btnAvancarInsta">Continuar para o Instagram &gt;</button>
+    </div>
+
+    <!-- Passo 2: Digitar o @ do Instagram + Disparo para o Telegram -->
+    <div class="checkout-step" id="stepInsta">
+      <p style="font-size:0.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em; margin:0">Etapa 2 de 3 · Verificação</p>
+      <h3 style="font-size:1.25rem; margin-top:0.3rem;">Qual é o seu @ do Instagram?</h3>
+      <p style="font-size:0.84rem; color:var(--muted); margin:0.6rem 0 1.2rem;">Obrigatório para validarmos sua compra e liberarmos o chat privado.</p>
+      
+      <div style="text-align:left; margin-bottom:1.2rem;">
+        <label for="inputInstaUser" style="font-size:0.78rem; color:var(--muted); display:block; margin-bottom:0.3rem;">Seu @ do Instagram:</label>
+        <input type="text" id="inputInstaUser" placeholder="@seuusuario" style="width:100%; background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:0.85rem; color:var(--text); font-size:0.95rem; outline:none;">
+      </div>
+
+      <button class="cta-btn" id="btnAvancarPix">Gerar Pix de Pagamento &gt;</button>
+    </div>
+
+    <!-- Passo 3: QR Code Estático + Copia e Cola + Botão Paguei -->
+    <div class="checkout-step" id="stepPix">
+      <p style="font-size:0.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em; margin:0">Etapa 3 de 3 · Checkout Seguro</p>
+      <h3 id="modalPlanoNome" style="font-size:1.25rem; margin-top:0.3rem;">Acesso VIP</h3>
+      <div style="font-family:'Playfair Display',serif; font-size:2.1rem; font-weight:800; color:var(--gold); margin:0.3rem 0;" id="modalPlanoPreco">R$ 9,90</div>
+
+      <div class="qr-container" id="qrcodeBox"></div>
+      
+      <p style="font-size:0.78rem; color:var(--muted); margin-bottom:0.4rem;">Escaneie o QR Code ou copie o código Pix abaixo:</p>
+      <textarea class="pix-code" id="pixCopiaCola" readonly rows="3"></textarea>
+      
+      <button class="cta-btn" id="btnCopiarPix" style="margin-bottom:0.6rem;">Copiar Código Pix</button>
+      <button class="cta-btn" id="btnJaPaguei" style="background:linear-gradient(135deg, #2ecc71, #27ae60); box-shadow:0 12px 30px rgba(46, 204, 113, 0.35);">Já Paguei · Ver Comprovante no Chat</button>
+      
+      <p class="secure-note" style="margin-top:0.8rem">🔒 Envie o print do comprovante no direct do Instagram para liberação imediata.</p>
+    </div>
+
+    <!-- Sub-etapa de Confirmação Final de Comprovante -->
+    <div class="checkout-step" id="stepComprovante">
+      <div style="font-size:2.5rem; margin-bottom:0.5rem;">📸</div>
+      <h3 style="font-size:1.35rem; margin-bottom:0.5rem; color:var(--gold);">Envie o Comprovante no Chat</h3>
+      <p style="font-size:0.86rem; color:var(--muted); line-height:1.5; margin-bottom:1.2rem;">
+        Para sua segurança, abra o chat do nosso Instagram oficial e envie o print do comprovante junto com o seu <b>@ <span id="spanInstaConfirm"></span></b>.
+      </p>
+      <button class="cta-btn" id="btnIrParaInsta" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);">Abrir Chat do Instagram</button>
+      <button class="cta-btn" id="btnFecharFinal" style="background:transparent; border:1px solid var(--line); color:var(--text); box-shadow:none; margin-top:0.6rem;">Concluir</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toastBox">Código Pix copiado com sucesso!</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-/* ===== EDITE SÓ ESTE BLOCO ===== */
-const C = {
+const CONFIG = {
   nome: "Clara Silva",
-  arroba: "@clarasilva",
-  foto: "",                          // opcional: foto em data:URI
-  frase: "O que o Instagram não deixa eu mostrar.",
-  plano1: {nome:"Acesso VIP + chat privado", preco:"9,90", pix:"00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-4266554400005204000053039865802BR5913Fulano de Tal6008BRASILIA62070503***63041D3D", link:""},
-  plano2: {nome:"Catálogo completo vitalício", preco:"29,90", pix:"", link:""},
-  suporte: "",                       // link do seu WhatsApp, ex.: https://wa.me/5511999999999
-  previas: [],                       // opcional: até 3 imagens em data:URI
-  depoimentos: [],                   // opcional: [{texto:"...", autor:"..."}]
-  fimDaPromo: "",                    // opcional: "2026-11-05T23:59:00-03:00"
+  arroba: "@clarasilva.vip",
+  fotoUrl: "", 
+  frase: "O que o Instagram bloqueia em 2 minutos, eu posto aqui sem censura. Quer chamada de vídeo e conversa particular comigo?",
   
-  // Configurações do Bot do Telegram criadas agora:
+  plano1: {
+    nome: "Acesso VIP Completo",
+    desc: "Chat privado + Fotos, vídeos diários e chamadas",
+    preco: "9,90",
+    pixCopiaCola: "00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-4266554400005204000053039865802BR5913Clara Silva6008BRASILIA62070503***63041D3D"
+  },
+  
+  plano2: {
+    nome: "Passaporte Vitalício + Pack Secreto",
+    desc: "Todo o acervo histórico + Chamadas particulares ilimitadas",
+    preco: "29,90",
+    pixCopiaCola: "00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-4266554400005204000053039865802BR5913Clara Silva6008BRASILIA62070503***63042D3D"
+  },
+  
+  linkInstagramDireto: "https://instagram.com/clarasilva.vip",
+
+  // Credenciais do Bot do Telegram criadas para notificação de leads
   telegramToken: "9079285793:AAFSyc8u5deecCm9GyTAPLdXMGXnFPpaIOk",
   telegramChatId: "5222340332"
 };
-/* ================================ */
 
-const $ = i => document.getElementById(i);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-document.title = C.nome + " · Canal VIP";
-$("nome").textContent = C.nome; $("arroba").textContent = C.arroba; $("frase").textContent = C.frase; $("rod").textContent = C.nome; $("yr").textContent = new Date().getFullYear();
-$("avatar").innerHTML = C.foto ? '<img alt="" src="'+esc(C.foto)+'">' : esc(C.nome.split(" ").map(p=>p[0]).slice(0,2).join(""));
-$("fan").innerHTML = [0,1,2].map(i => '<div class="t">'+(C.previas[i]?'<img alt="" src="'+esc(C.previas[i])+'">':'')+'</div>').join("");
-let cur=null;
+// Dados da Bio
+document.getElementById('nomeUser').textContent = CONFIG.nome;
+document.getElementById('arrobaUser').textContent = CONFIG.arroba;
+document.getElementById('fraseUser').textContent = CONFIG.frase;
+document.getElementById('anoAtual').textContent = new Date().getFullYear();
 
-// Função para disparar notificação automática para o Telegram
-function notificarTelegram(planoNome, planoPreco) {
-  if(!C.telegramToken || !C.telegramChatId) return;
-  const mensagem = `🚨 *NOVO CHECKOUT ABERTO!* 🚨\n\n` +
-                   `💎 *Plano:* ${planoNome}\n` +
-                   `💰 *Valor:* R$ ${planoPreco}\n` +
-                   `⏰ *Horário:* ${new Date().toLocaleString('pt-BR')}`;
-
-  fetch(`https://api.telegram.org/bot${C.telegramToken}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: C.telegramChatId,
-      text: mensagem,
-      parse_mode: 'Markdown'
-    })
-  }).catch(err => console.log('Erro ao notificar Telegram:', err));
+if (CONFIG.fotoUrl) {
+  document.getElementById('avatarBox').innerHTML = `<img src="${CONFIG.fotoUrl}" alt="${CONFIG.nome}">`;
+} else {
+  document.getElementById('avatarBox').textContent = CONFIG.nome.split(" ").map(n=>n[0]).slice(0,2).join("");
 }
 
-function comprar(p){ 
-  if(p.pix){ 
-    notificarTelegram(p.nome, p.preco); // Dispara o alerta no Telegram assim que abre o Pix
-    abrir(p); 
-    return; 
-  } 
-  if(p.link){ location.href=p.link; return; } 
-  toast("Pagamento ainda não configurado."); 
+// Limitar visualização inicial dos 33 gatilhos
+const listTriggers = document.getElementById('triggersList');
+const itemsTriggers = listTriggers.querySelectorAll('li');
+itemsTriggers.forEach((li, idx) => {
+  if (idx >= 6) li.style.display = 'none';
+});
+
+let expandidoTriggers = false;
+document.getElementById('btnExpandTriggers').addEventListener('click', () => {
+  expandidoTriggers = !expandidoTriggers;
+  itemsTriggers.forEach((li, idx) => {
+    if (idx >= 6) li.style.display = expandidoTriggers ? 'flex' : 'none';
+  });
+  document.getElementById('btnExpandTriggers').textContent = expandidoTriggers ? 'Ver menos &lt;' : 'Ver mais &gt;';
+});
+
+function rolarParaPrecos() {
+  document.getElementById('secaoPrecos').scrollIntoView({ behavior: 'smooth' });
 }
 
-function abrir(p){ cur=p; const code=p.pix.replace(/\s+/g,""); cur.code=code;
-  $("mTitulo").textContent=p.nome; $("mPreco").textContent="R$ "+p.preco; $("pixTxt").value=code;
-  const q=$("qr"); q.innerHTML="";
-  try{ new QRCode(q,{text:code,width:176,height:176,correctLevel:QRCode.CorrectLevel.M}); }catch(e){ q.textContent="Use o copia e cola abaixo."; }
-  $("modal").classList.add("on"); 
+// 80+ Comentários da comunidade
+const nomesComentarios = [
+  "Bruno S.", "Lucas M.", "Rafael K.", "Diego T.", "Matheus P.", "Felipe R.", "Gustavo H.", "Rodrigo L.", "Thiago B.", "Marcos V.", 
+  "Alexandre C.", "Leonardo N.", "Vinicius A.", "Bruno E.", "Gabriel O.", "Igor S.", "Caio M.", "Lucas R.", "Mateus F.", "Renato L.", 
+  "André P.", "Daniel C.", "Eduardo B.", "Fabio M.", "Henrique S.", "Julio T.", "Leandro V.", "Marcelo K.", "Nicolas P.", "Otavio R.", 
+  "Paulo H.", "Ricardo N.", "Samuel A.", "Tulio E.", "Vitor O.", "Wagner S.", "Yuri M.", "Zeca L.", "Beto F.", "Cesar R.", 
+  "Danilo P.", "Erick T.", "Flavio V.", "Gilberto M.", "Higor S.", "Jonas C.", "Kauan B.", "Leandro P.", "Murilo O.", "Renan T.",
+  "Alex S.", "Breno M.", "Carlos R.", "Davi K.", "Enzo P.", "Felipe T.", "Giovanni L.", "Heitor N.", "Joao V.", "Kaique B.",
+  "Lucas H.", "Marcio C.", "Nathan A.", "Otavio F.", "Pedro H.", "Rodrigo S.", "Sandro M.", "Tiago R.", "Vicente L.", "William P.",
+  "Alan J.", "Bernardo S.", "Caio V.", "Daniel M.", "Emanuel K.", "Fabrício R.", "Guilherme B.", "Ian T.", "Jonathan L.", "Kelvin N."
+];
+
+const textosComentarios = [
+  "Mano, o corpo dela é muito g*stoso, a r*ba é absurda de perfeita!",
+  "Aquela foto no espelho de pijama me deixou com tesão o dia todo kkk",
+  "O chat privado é real mesmo, ela respondeu em áudio com uma voz muito s*fada.",
+  "Simplesmente a m*lher mais g*sta que já assinei. Corpo absurdo!",
+  "Valeu muito a pena, mandei mensagem pedindo vídeo especial e ela mandou sem censura.",
+  "Caraca, que p*ta g*ta mano... O shape é trincado demais.",
+  "Nenhum arrependimento. O pack de entrada já entrega muito, p*ta m*lher g*stosa.",
+  "Os vídeos da academia são pesados demais, recomendo muito rapaziada.",
+  "Atendimento super rápido, paguei no Pix e em 2 minutos já tava no VIP.",
+  "Que r*ba mano, sem condição nenhuma... marcou 10/10.",
+  "A voz dela nos áudios de boa noite é sacanagem de tão g*stosa.",
+  "Já tava desacreditado desses perfis, mas essa p*iranha entrega demais.",
+  "Corpo impecável, pele perfeita, zero defeitos nessa g*stosa.",
+  "Comprei o de 9,90 e logo peguei o upsell, p*ta m*lher deliciosa.",
+  "O conteúdo na piscina tá absurdo de b*m.",
+  "Mano do céu... os trechos s*fados sem censura são outra coisa.",
+  "Vale cada centavo, rapaziada pode ir sem medo na g*stosa.",
+  "Ela responde no chat trocando ideia s*fada mesmo, adorei demais.",
+  "Shape impecável e muito natural nos vídeos dessa g*sta.",
+  "Melhor investimento do meu dia útil kkkk abraço pra Clara!",
+  "Simplesmente perfeita, corpo de dar inveja e muito s*fada.",
+  "O pack tá muito completo, vale muito a pena.",
+  "G*stosa demais, sem palavras pra descrever essa m*lher.",
+  "Atendimento impecável via Instagram, rapidao liberou a s*fada.",
+  "Corpinho delícia demais, recomendo muito o VIP.",
+  "Os vídeos de bom dia salvam o tesão de qualquer um.",
+  "Nível altíssimo de conteúdo, parabéns pra g*stosa.",
+  "Mano, a r*ba dela é gigante, sem defeitos.",
+  "Vale cada centavo do Pix, conteúdo de primeiríssima.",
+  "Melhor compra que fiz no mês.",
+  "Shape trincado e rosto de boneca, p*ta g*sta.",
+  "O chat privado compensa demais, atenção total da s*fada.",
+  "Comprei escondido da patroa e não me arrependo de nada kkkk",
+  "Corpo sensacional, muito g*ta mesmo.",
+  "Conteúdo atualizado toda semana, vale muito.",
+  "Simplesmente apaixonado pelo shape dessa m*lher g*stosa.",
+  "Mano, que m*lher espetacular e p*iranha.",
+  "Liberou tudo certinho no meu Instagram, adorei.",
+  "Tudo em 4K de alta qualidade, impecável.",
+  "Corpo dos sonhos de qualquer f*derdor.",
+  "Atendimento nota 10 e conteúdo nota 1000.",
+  "Muito satisfeito com o acesso VIP.",
+  "Melhor perfil disparado que já vi.",
+  "Shape impecável nos vídeos de rotina.",
+  "Mano, vale muito a pena mesmo.",
+  "Conteúdo sem frescura e direto ao ponto.",
+  "Corpo perfeito demais.",
+  "Comprei de olhos fechados e recomendo.",
+  "Atendimento VIP de verdade.",
+  "Simplesmente sensacional!",
+  "Mano, essa g*stosa me deixa maluco.",
+  "Os vídeos sem censura são pesados.",
+  "P*ta m*lher gostosa do caramba.",
+  "Melhor canal VIP que já paguei na vida.",
+  "Shape impecável, r*ba gigantesca.",
+  "Atendimento nota 10 no direct.",
+  "Muito g*sta e s*fada nos áudios.",
+  "Valeu cada centavo do Pix.",
+  "Maravilhosa demais, sem defeitos.",
+  "Comprei e recomendo muito rapaziada."
+];
+
+const commentsListHtml = document.getElementById('commentsListBox');
+let listaComentariosArray = [];
+
+for(let i=0; i<65; i++) {
+  listaComentariosArray.push({
+    autor: nomesComentarios[i % nomesComentarios.length],
+    tempo: (Math.floor(Math.random()*50)+1) + " min atrás",
+    texto: textosComentarios[i % textosComentarios.length]
+  });
 }
 
-$("fechar").onclick=()=>$("modal").classList.remove("on");
-$("copiar").onclick=async()=>{ try{ await navigator.clipboard.writeText(cur.code); toast("Código Pix copiado."); }catch(e){ $("pixTxt").select(); try{ document.execCommand("copy"); toast("Código Pix copiado."); }catch(x){ toast("Selecione o código e copie manualmente."); } } };
-$("comprovante").onclick=()=>{ if(!C.suporte){ toast("Configure o link do WhatsApp em “suporte”."); return; } const m=encodeURIComponent("Oi! Acabei de pagar "+cur.nome+" (R$ "+cur.preco+"). Segue o comprovante."); location.href=C.suporte+(C.suporte.includes("?")?"&":"?")+"text="+m; };
-function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),3000); }
-$("planos").innerHTML = [C.plano1,C.plano2].map((p,i)=>'<button class="plan'+(i?'':' top')+'" data-i="'+i+'">'+(i?'':'<span class="tag">Mais escolhido</span>')+'<h3>'+esc(p.nome)+'</h3><div class="price">R$ '+esc(p.preco)+' <small>'+(i?'pagamento único':'acesso')+'</small></div><span class="cta">Quero este</span></button>').join("");
-$("planos").addEventListener("click", e => { const b=e.target.closest(".plan"); if(b) comprar([C.plano1,C.plano2][+b.dataset.i]); });
-document.querySelectorAll(".go").forEach(b => { b.textContent = "Quero ver tudo por R$ " + C.plano1.preco; b.addEventListener("click", () => comprar(C.plano1)); });
-if (C.suporte) $("sup").innerHTML = '<a href="'+esc(C.suporte)+'">Dúvidas? Fale com o suporte</a>';
-if (C.depoimentos.length){ $("dep").style.display="block"; $("deps").innerHTML = C.depoimentos.map(d=>'<blockquote class="q">“'+esc(d.texto)+'”<cite>'+esc(d.autor)+'</cite></blockquote>').join(""); }
-if (C.fimDaPromo){ const end=new Date(C.fimDaPromo).getTime(); const tick=()=>{ const d=end-Date.now(); if(isNaN(end)||d<=0){$("fim").classList.remove("on");return;} const p=n=>String(n).padStart(2,"0"); $("clock").textContent=p(Math.floor(d/36e5))+":"+p(Math.floor(d%36e5/6e4))+":"+p(Math.floor(d%6e4/1e3)); $("fim").classList.add("on"); }; tick(); setInterval(tick,1000); }
-try{ if(sessionStorage.getItem("age18")==="1") $("gate").classList.add("off"); }catch(e){}
-$("enter").addEventListener("click",()=>{ $("gate").classList.add("off"); try{sessionStorage.setItem("age18","1");}catch(e){} });
+function renderizarComentarios() {
+  commentsListHtml.innerHTML = listaComentariosArray.map(c => `
+    <div class="comment-item">
+      <div class="comment-header">
+        <span class="comment-author">${c.autor}</span>
+        <span class="comment-time">${c.tempo}</span>
+      </div>
+      <div class="comment-text">${c.texto}</div>
+    </div>
+  `).join("");
+}
+renderizarComentarios();
+
+let usuarioComprou = false;
+document.getElementById('btnEnviarComentario').addEventListener('click', () => {
+  const textoInput = document.getElementById('inputNovoComentario').value.trim();
+  if (!textoInput) {
+    mostrarToast("Digite seu comentário antes de enviar.");
+    return;
+  }
+  if (!usuarioComprou) {
+    mostrarToast("🔒 Acesso restrito: Você precisa adquirir um plano VIP para poder comentar.");
+    rolarParaPrecos();
+    return;
+  }
+  
+  listaComentariosArray.unshift({
+    autor: "Você (VIP Verificado)",
+    tempo: "Agora mesmo",
+    texto: textoInput
+  });
+  renderizarComentarios();
+  document.getElementById('inputNovoComentario').value = "";
+  mostrarToast("Comentário publicado com sucesso!");
+});
+
+// Notificações flutuantes em posições totalmente aleatórias e seguras (evitando rodapé e botões)
+const compradores = ["Carlos M.", "Bruno H.", "Thiago R.", "Rafael S.", "Diego P.", "Lucas V.", "Marcos A.", "Felipe N."];
+function dispararToastCompra() {
+  const nomeAleatorio = compradores[Math.floor(Math.random()*compradores.length)];
+  document.getElementById('toastBuyerName').textContent = nomeAleatorio;
+  
+  const toastF = document.getElementById('purchaseToast');
+  
+  const posicoes = [
+    { top: '4.5rem', left: '1rem', right: 'auto', bottom: 'auto' },
+    { top: '4.5rem', right: '1rem', left: 'auto', bottom: 'auto' },
+    { top: '15rem', left: '1rem', right: 'auto', bottom: 'auto' },
+    { top: '15rem', right: '1rem', left: 'auto', bottom: 'auto' },
+    { top: '25rem', left: '1rem', right: 'auto', bottom: 'auto' },
+    { top: '25rem', right: '1rem', left: 'auto', bottom: 'auto' }
+  ];
+  const pos = posicoes[Math.floor(Math.random()*posicoes.length)];
+  
+  toastF.style.top = pos.top;
+  toastF.style.left = pos.left;
+  toastF.style.right = pos.right;
+  toastF.style.bottom = pos.bottom;
+  
+  toastF.classList.add('show');
+  setTimeout(() => {
+    toastF.classList.remove('show');
+  }, 4000);
+}
+setInterval(dispararToastCompra, 14000);
+
+// Renderizar Planos bem embaixo
+const planosContainer = document.getElementById('planosContainer');
+const planosData = [CONFIG.plano1, CONFIG.plano2];
+
+planosContainer.innerHTML = planosData.map((p, idx) => `
+  <div class="plan-card ${idx === 0 ? 'featured' : ''}" data-index="${idx}">
+    ${idx === 0 ? '<div class="plan-tag">Mais Escolhido · 83% OFF</div>' : '<div class="plan-tag" style="background:var(--rose); color:#fff">Passaporte VIP</div>'}
+    <div class="plan-header">
+      <div>
+        <div class="plan-title">${p.nome}</div>
+        <div class="plan-desc">${p.desc}</div>
+      </div>
+      <div class="plan-price">
+        R$ ${p.preco}
+        <small>${idx === 0 ? 'acesso completo' : 'vitalício'}</small>
+      </div>
+    </div>
+    <ul class="plan-features">
+      <li>✓ <span>Chat privado & chamadas</span> liberados</li>
+      <li>✓ <span>Mídias sem censura</span> atualizadas toda semana</li>
+      <li>✓ <span>Conversas particulares</span> diretas</li>
+    </ul>
+    <button class="cta-btn" style="margin-top:1.1rem">${idx === 0 ? 'Quero Entrar no VIP' : 'Desbloquear Acesso Total'}</button>
+  </div>
+`).join("");
+
+let planoAtualSelecionado = null;
+let leadTempWhats = "";
+
+function iniciarCheckout(plano) {
+  planoAtualSelecionado = plano;
+  
+  document.getElementById('stepWhats').classList.add('active');
+  document.getElementById('stepInsta').classList.remove('active');
+  document.getElementById('stepPix').classList.remove('active');
+  document.getElementById('stepComprovante').classList.remove('active');
+  
+  document.getElementById('modalPlanoNome').textContent = plano.nome;
+  document.getElementById('modalPlanoPreco').textContent = "R$ " + plano.preco;
+  document.getElementById('pixCopiaCola').value = plano.pixCopiaCola;
+  
+  const qrBox = document.getElementById('qrcodeBox');
+  qrBox.innerHTML = "";
+  try {
+    new QRCode(qrBox, {
+      text: plano.pixCopiaCola,
+      width: 176,
+      height: 176,
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  } catch(e) {
+    qrBox.innerHTML = "<p style='color:#000; font-size:0.8rem'>Use o botão Copiar Código Pix abaixo.</p>";
+  }
+  
+  document.getElementById('pixModal').classList.add('on');
+}
+
+document.querySelectorAll('.plan-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const idx = card.getAttribute('data-index');
+    iniciarCheckout(planosData[idx]);
+  });
+});
+
+document.querySelectorAll('#btnSticky, .cta-btn').forEach(btn => {
+  if(!btn.closest('.plan-card') && !btn.closest('.modal-box') && btn.id !== 'btnEnviarComentario') {
+    btn.addEventListener('click', () => iniciarCheckout(CONFIG.plano1));
+  }
+});
+
+document.getElementById('btnAvancarInsta').addEventListener('click', () => {
+  const whats = document.getElementById('inputWhats').value.trim();
+  if (!whats || whats.length < 8) {
+    mostrarToast("Por favor, digite seu WhatsApp com DDD válido.");
+    document.getElementById('inputWhats').focus();
+    return;
+  }
+  leadTempWhats = whats;
+  document.getElementById('stepWhats').classList.remove('active');
+  document.getElementById('stepInsta').classList.add('active');
+});
+
+// Envio automático para o Bot do Telegram quando o usuário preenche o Instagram e avança para o Pix
+document.getElementById('btnAvancarPix').addEventListener('click', () => {
+  const insta = document.getElementById('inputInstaUser').value.trim();
+  if (!insta) {
+    mostrarToast("Por favor, digite seu @ do Instagram.");
+    document.getElementById('inputInstaUser').focus();
+    return;
+  }
+  
+  // Disparar notificação para o Telegram via API
+  if (CONFIG.telegramToken && CONFIG.telegramChatId) {
+    const mensagem = `🚨 *NOVO LEAD / CHECKOUT INICIADO!* 🚨\n\n` +
+                     `📱 *WhatsApp:* ${leadTempWhats}\n` +
+                     `📸 *Instagram:* ${insta}\n` +
+                     `💎 *Plano:* ${planoAtualSelecionado.nome} (R$ ${planoAtualSelecionado.preco})\n` +
+                     `⏰ *Horário:* ${new Date().toLocaleString('pt-BR')}`;
+
+    fetch(`https://api.telegram.org/bot${CONFIG.telegramToken}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: CONFIG.telegramChatId,
+        text: mensagem,
+        parse_mode: 'Markdown'
+      })
+    }).catch(err => console.log('Erro ao notificar Telegram:', err));
+  }
+
+  document.getElementById('spanInstaConfirm').textContent = insta;
+  document.getElementById('stepInsta').classList.remove('active');
+  document.getElementById('stepPix').classList.add('active');
+  usuarioComprou = true;
+});
+
+document.getElementById('btnCloseModal').addEventListener('click', () => {
+  document.getElementById('pixModal').classList.remove('on');
+});
+
+document.getElementById('btnCopiarPix').addEventListener('click', async () => {
+  const pixInput = document.getElementById('pixCopiaCola');
+  pixInput.select();
+  try {
+    await navigator.clipboard.writeText(pixInput.value);
+    mostrarToast("Código Pix copiado! Cole no app do seu banco.");
+  } catch(err) {
+    try {
+      document.execCommand('copy');
+      mostrarToast("Código Pix copiado!");
+    } catch(e) {
+      mostrarToast("Selecione o texto e copie manualmente.");
+    }
+  }
+});
+
+document.getElementById('btnJaPaguei').addEventListener('click', () => {
+  document.getElementById('stepPix').classList.remove('active');
+  document.getElementById('stepComprovante').classList.add('active');
+});
+
+document.getElementById('btnIrParaInsta').addEventListener('click', () => {
+  window.open(CONFIG.linkInstagramDireto, '_blank');
+});
+
+document.getElementById('btnFecharFinal').addEventListener('click', () => {
+  document.getElementById('pixModal').classList.remove('on');
+});
+
+function mostrarToast(texto) {
+  const toast = document.getElementById('toastBox');
+  toast.textContent = texto;
+  toast.classList.add('on');
+  setTimeout(() => toast.classList.remove('on'), 3500);
+}
+
+if (CONFIG.linkInstagramDireto) {
+  document.getElementById('suporteBox').innerHTML = `<a href="${CONFIG.linkInstagramDireto}" target="_blank">Precisa de ajuda com o acesso? Fale no Instagram oficial</a>`;
+}
 </script>
+
 </body>
 </html>
