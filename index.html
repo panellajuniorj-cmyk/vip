@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clara Silva · Canal VIP</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500;0,9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0306;--card:#1a0a10;--line:#4d1626;--text:#fff3ee;--muted:#c9a9b6;--rose:#ff2d55;--gold:#ffc58a;--ink:#2a0713;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff4f0;--card:#fff;--line:#f1cdd8;--text:#2a0f1c;--muted:#7d5666;--rose:#d81f5a;--gold:#b5651d;--ink:#fff;color-scheme:light}}
+:root[data-theme="dark"]{--bg:#0b0306;--card:#1a0a10;--line:#4d1626;--text:#fff3ee;--muted:#c9a9b6;--rose:#ff2d55;--gold:#ffc58a;--ink:#2a0713}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+p{margin:0}h1,h2,h3{margin:0;font-family:Fraunces,Georgia,serif}
+main{max-width:30rem;margin:0 auto;padding:0 1.1rem 7rem}
+.hero{text-align:center;padding:2.6rem 0 1.5rem;position:relative}
+.hero::before{content:"";position:absolute;inset:-4rem -3rem auto;height:20rem;background:radial-gradient(closest-side,color-mix(in srgb,var(--rose) 45%,transparent),transparent);z-index:-1}
+.avatar{width:128px;height:128px;border-radius:50%;margin:0 auto 1.2rem;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,var(--rose),#a1124a);color:#fff;font:800 2.8rem Fraunces,serif;border:4px solid var(--bg);box-shadow:0 0 0 3px var(--gold),0 14px 40px color-mix(in srgb,var(--rose) 50%,transparent)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:3.1rem;font-weight:800;letter-spacing:-.02em}
+.arroba{color:var(--gold);font-weight:500;margin-top:.2rem}
+.frase{font:italic 500 1.7rem/1.2 Fraunces,serif;margin:1.4rem auto 0;max-width:19rem}
+.sub{color:var(--muted);margin:.8rem auto 0;max-width:22rem}
+.cta{display:block;width:100%;border:0;border-radius:999px;background:linear-gradient(90deg,var(--rose),#ff8a5c);color:var(--ink);font:700 1.05rem Inter,sans-serif;padding:1.05rem 1rem;margin-top:1.4rem;cursor:pointer;box-shadow:0 10px 30px color-mix(in srgb,var(--rose) 45%,transparent)}
+.cta:focus-visible,.plan:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.fine{color:var(--muted);font-size:.82rem;text-align:center;margin-top:.7rem}
+section{margin-top:3rem}
+h2{font-size:1.7rem;font-weight:800;margin-bottom:1.1rem;letter-spacing:-.01em}
+.fan{display:flex;justify-content:center;height:15rem;margin-top:1rem}
+.t{width:9.2rem;aspect-ratio:3/4;border-radius:18px;overflow:hidden;position:relative;display:grid;place-items:center;border:3px solid var(--bg);box-shadow:0 12px 30px #0006;margin:0 -1.4rem;background:linear-gradient(160deg,var(--rose),#a1124a)}
+.t:nth-child(1){transform:rotate(-9deg) translateY(1rem)}.t:nth-child(2){transform:translateY(-.5rem);z-index:2;background:linear-gradient(160deg,#ff8a5c,var(--rose))}.t:nth-child(3){transform:rotate(9deg) translateY(1rem);background:linear-gradient(160deg,#a1124a,#3c6bff)}
+.t img{width:100%;height:100%;object-fit:cover;filter:blur(14px)}
+.t::after{content:"🔒";position:absolute;font-size:1.8rem}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.list li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.1rem 1.2rem}
+.list b{display:block;font:800 1.1rem Fraunces,serif}
+.list span{color:var(--muted);font-size:.93rem}
+ol.list{counter-reset:s}ol.list li{counter-increment:s;display:flex;gap:.9rem;align-items:center}
+ol.list li::before{content:counter(s);flex:none;width:2rem;height:2rem;border-radius:50%;background:var(--gold);color:#2a0713;display:grid;place-items:center;font-weight:700}
+.plan{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.4rem;margin-bottom:1rem;cursor:pointer;position:relative}
+.plan.top{border:2px solid var(--rose);background:linear-gradient(180deg,color-mix(in srgb,var(--rose) 14%,var(--card)),var(--card))}
+.plan .tag{position:absolute;top:-.8rem;left:1.2rem;background:var(--gold);color:#2a0713;font-size:.78rem;font-weight:700;border-radius:99px;padding:.15rem .8rem}
+.plan h3{font-size:1.25rem}
+.price{font:800 2.4rem Fraunces,serif;margin-top:.6rem}.price small{font:500 .9rem Inter,sans-serif;color:var(--muted)}
+.plan .cta{margin-top:1rem}.plan:not(.top) .cta{background:none;color:var(--text);border:1px solid var(--line);box-shadow:none}
+details{border-bottom:1px solid var(--line);padding:1rem 0}summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin-top:.5rem;font-size:.95rem}
+.q{background:var(--card);border-left:3px solid var(--rose);border-radius:10px;padding:1rem;margin:0 0 .7rem}.q cite{display:block;color:var(--muted);font-size:.85rem;margin-top:.4rem;font-style:normal}
+footer{margin-top:3rem;text-align:center;color:var(--muted);font-size:.8rem}footer a{color:var(--text)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px))}.bar .cta{margin:0 auto;max-width:28rem}
+.gate{position:fixed;inset:0;z-index:20;background:var(--bg);display:grid;place-items:center;padding:1.5rem;text-align:center}.gate.off{display:none}.gate div{max-width:22rem}.gate a{display:block;margin-top:1rem;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:5.5rem;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:.6rem 1rem;border-radius:10px;font-size:.9rem;display:none}.toast.on{display:block}
+#fim{display:none;background:var(--gold);color:#2a0713;text-align:center;font-weight:600;padding:.55rem}#fim.on{display:block}
+.modal{position:fixed;inset:0;z-index:30;background:#000c;display:none;place-items:center;padding:1rem}.modal.on{display:grid}
+.box{background:var(--card);border:1px solid var(--line);border-radius:24px;max-width:22rem;width:100%;padding:1.4rem;text-align:center;position:relative;max-height:94%;overflow:auto}
+.x{position:absolute;top:.5rem;right:.8rem;background:none;border:0;color:var(--text);font-size:1.7rem;cursor:pointer}
+.qr{background:#fff;padding:12px;border-radius:14px;display:inline-block;margin:.8rem 0}.qr img,.qr canvas{display:block}
+textarea{width:100%;font:.72rem/1.3 ui-monospace,monospace;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:.6rem;resize:none}
+@media (prefers-reduced-motion:no-preference){.cta{transition:transform .15s}.cta:hover{transform:translateY(-2px)}}
+</style>
+</head>
+<body>
+<div class="gate" id="gate" role="dialog" aria-modal="true"><div>
+  <h2>Conteúdo para maiores de 18 anos</h2>
+  <p style="color:var(--muted)">Confirme que você tem 18 anos ou mais para continuar.</p>
+  <button class="cta" id="enter">Tenho 18 anos ou mais</button><a href="https://www.google.com">Sair</a>
+</div></div>
+<div id="fim">Condição especial termina em <span id="clock"></span></div>
+<main>
+  <header class="hero">
+    <div class="avatar" id="avatar"></div>
+    <h1 id="nome"></h1><p class="arroba" id="arroba"></p>
+    <p class="frase" id="frase"></p>
+    <p class="sub">Fotos e vídeos sem censura e um chat privado onde você me conta exatamente o que quer ver.</p>
+    <button class="cta go"></button>
+    <p class="fine">Pagamento por Pix · acesso liberado após a confirmação</p>
+  </header>
+
+  <section><h2>Só uma provinha…</h2>
+    <div class="fan" id="fan"></div>
+    <p class="fine">Desfocado de propósito. Pague e eu libero tudo, sem cortes.</p>
+  </section>
+
+  <section><h2>O que te espera lá dentro</h2>
+    <ul class="list">
+      <li><b>Sem censura, sem filtro</b><span>Fotos e vídeos ousados que eu só mostro aqui dentro.</span></li>
+      <li><b>Chat privado, só nós dois</b><span>Me conte suas vontades e eu respondo com carinho e provocação.</span></li>
+      <li><b>Sempre algo novo pra você</b><span>Volte sempre: tem novidade quente esperando.</span></li>
+    </ul><button class="cta go"></button>
+  </section>
+
+  <section><h2>Como entrar</h2>
+    <ol class="list"><li><span>Escolha seu acesso abaixo.</span></li><li><span>Pague com Pix, leva segundos.</span></li><li><span>Mande o comprovante e receba seu link de acesso.</span></li></ol>
+  </section>
+
+  <section><h2>Escolha seu acesso</h2><div id="planos"></div></section>
+
+  <section id="dep" style="display:none"><h2>Quem assina, fala</h2><div id="deps"></div></section>
+
+  <section><h2>Dúvidas comuns</h2>
+    <details><summary>Como recebo o acesso?</summary><p>Assim que o Pix é confirmado, você recebe o link de acesso.</p></details>
+    <details><summary>É seguro pagar?</summary><p>O pagamento acontece no checkout do banco/gateway, com Pix. Nenhum dado de cartão passa por esta página.</p></details>
+    <details><summary>O que aparece na minha fatura?</summary><p>Aparece o nome do processador de pagamento. Confira o nome exato no checkout.</p></details>
+    <details><summary>Preciso de ajuda, e agora?</summary><p>Fale com o suporte pelo link no rodapé.</p></details>
+  </section>
+
+  <footer>
+    <p id="sup"></p>
+    <p>Conteúdo exclusivo para maiores de 18 anos. © <span id="yr"></span> <span id="rod"></span></p>
+  </footer>
+</main>
+<div class="bar"><button class="cta go" style="margin-top:0"></button></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitulo"><div class="box">
+  <button id="fechar" class="x" aria-label="Fechar">×</button>
+  <p class="fine" style="margin:0">Pagamento por Pix</p><h3 id="mTitulo"></h3><div class="price" id="mPreco"></div>
+  <div id="qr" class="qr"></div>
+  <p class="fine" style="margin:0 0 .5rem">Escaneie no app do banco ou use o copia e cola:</p>
+  <textarea id="pixTxt" readonly rows="3"></textarea>
+  <button class="cta" id="copiar">Copiar código Pix</button>
+  <button class="cta" id="comprovante" style="background:none;color:var(--text);border:1px solid var(--line);box-shadow:none">Já paguei: enviar comprovante</button>
+  <p class="fine">O acesso é liberado depois que o pagamento for confirmado.</p>
+</div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* ===== EDITE SÓ ESTE BLOCO ===== */
+const C = {
+  nome: "Clara Silva",
+  arroba: "@clarasilva",
+  foto: "",                          // opcional: foto em data:URI
+  frase: "O que o Instagram não deixa eu mostrar.",
+  plano1: {nome:"Acesso VIP + chat privado", preco:"9,90", pix:"00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-4266554400005204000053039865802BR5913Fulano de Tal6008BRASILIA62070503***63041D3D", link:""},
+  plano2: {nome:"Catálogo completo vitalício", preco:"29,90", pix:"", link:""},
+  suporte: "",                       // link do seu WhatsApp, ex.: https://wa.me/5511999999999
+  previas: [],                       // opcional: até 3 imagens em data:URI
+  depoimentos: [],                   // opcional: [{texto:"...", autor:"..."}]
+  fimDaPromo: "",                    // opcional: "2026-11-05T23:59:00-03:00"
+  
+  // Configurações do Bot do Telegram criadas agora:
+  telegramToken: "9079285793:AAFSyc8u5deecCm9GyTAPLdXMGXnFPpaIOk",
+  telegramChatId: "5222340332"
+};
+/* ================================ */
+
+const $ = i => document.getElementById(i);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+document.title = C.nome + " · Canal VIP";
+$("nome").textContent = C.nome; $("arroba").textContent = C.arroba; $("frase").textContent = C.frase; $("rod").textContent = C.nome; $("yr").textContent = new Date().getFullYear();
+$("avatar").innerHTML = C.foto ? '<img alt="" src="'+esc(C.foto)+'">' : esc(C.nome.split(" ").map(p=>p[0]).slice(0,2).join(""));
+$("fan").innerHTML = [0,1,2].map(i => '<div class="t">'+(C.previas[i]?'<img alt="" src="'+esc(C.previas[i])+'">':'')+'</div>').join("");
+let cur=null;
+
+// Função para disparar notificação automática para o Telegram
+function notificarTelegram(planoNome, planoPreco) {
+  if(!C.telegramToken || !C.telegramChatId) return;
+  const mensagem = `🚨 *NOVO CHECKOUT ABERTO!* 🚨\n\n` +
+                   `💎 *Plano:* ${planoNome}\n` +
+                   `💰 *Valor:* R$ ${planoPreco}\n` +
+                   `⏰ *Horário:* ${new Date().toLocaleString('pt-BR')}`;
+
+  fetch(`https://api.telegram.org/bot${C.telegramToken}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: C.telegramChatId,
+      text: mensagem,
+      parse_mode: 'Markdown'
+    })
+  }).catch(err => console.log('Erro ao notificar Telegram:', err));
+}
+
+function comprar(p){ 
+  if(p.pix){ 
+    notificarTelegram(p.nome, p.preco); // Dispara o alerta no Telegram assim que abre o Pix
+    abrir(p); 
+    return; 
+  } 
+  if(p.link){ location.href=p.link; return; } 
+  toast("Pagamento ainda não configurado."); 
+}
+
+function abrir(p){ cur=p; const code=p.pix.replace(/\s+/g,""); cur.code=code;
+  $("mTitulo").textContent=p.nome; $("mPreco").textContent="R$ "+p.preco; $("pixTxt").value=code;
+  const q=$("qr"); q.innerHTML="";
+  try{ new QRCode(q,{text:code,width:176,height:176,correctLevel:QRCode.CorrectLevel.M}); }catch(e){ q.textContent="Use o copia e cola abaixo."; }
+  $("modal").classList.add("on"); 
+}
+
+$("fechar").onclick=()=>$("modal").classList.remove("on");
+$("copiar").onclick=async()=>{ try{ await navigator.clipboard.writeText(cur.code); toast("Código Pix copiado."); }catch(e){ $("pixTxt").select(); try{ document.execCommand("copy"); toast("Código Pix copiado."); }catch(x){ toast("Selecione o código e copie manualmente."); } } };
+$("comprovante").onclick=()=>{ if(!C.suporte){ toast("Configure o link do WhatsApp em “suporte”."); return; } const m=encodeURIComponent("Oi! Acabei de pagar "+cur.nome+" (R$ "+cur.preco+"). Segue o comprovante."); location.href=C.suporte+(C.suporte.includes("?")?"&":"?")+"text="+m; };
+function toast(m){ const t=$("toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),3000); }
+$("planos").innerHTML = [C.plano1,C.plano2].map((p,i)=>'<button class="plan'+(i?'':' top')+'" data-i="'+i+'">'+(i?'':'<span class="tag">Mais escolhido</span>')+'<h3>'+esc(p.nome)+'</h3><div class="price">R$ '+esc(p.preco)+' <small>'+(i?'pagamento único':'acesso')+'</small></div><span class="cta">Quero este</span></button>').join("");
+$("planos").addEventListener("click", e => { const b=e.target.closest(".plan"); if(b) comprar([C.plano1,C.plano2][+b.dataset.i]); });
+document.querySelectorAll(".go").forEach(b => { b.textContent = "Quero ver tudo por R$ " + C.plano1.preco; b.addEventListener("click", () => comprar(C.plano1)); });
+if (C.suporte) $("sup").innerHTML = '<a href="'+esc(C.suporte)+'">Dúvidas? Fale com o suporte</a>';
+if (C.depoimentos.length){ $("dep").style.display="block"; $("deps").innerHTML = C.depoimentos.map(d=>'<blockquote class="q">“'+esc(d.texto)+'”<cite>'+esc(d.autor)+'</cite></blockquote>').join(""); }
+if (C.fimDaPromo){ const end=new Date(C.fimDaPromo).getTime(); const tick=()=>{ const d=end-Date.now(); if(isNaN(end)||d<=0){$("fim").classList.remove("on");return;} const p=n=>String(n).padStart(2,"0"); $("clock").textContent=p(Math.floor(d/36e5))+":"+p(Math.floor(d%36e5/6e4))+":"+p(Math.floor(d%6e4/1e3)); $("fim").classList.add("on"); }; tick(); setInterval(tick,1000); }
+try{ if(sessionStorage.getItem("age18")==="1") $("gate").classList.add("off"); }catch(e){}
+$("enter").addEventListener("click",()=>{ $("gate").classList.add("off"); try{sessionStorage.setItem("age18","1");}catch(e){} });
+</script>
+</body>
+</html>
