@@ -197,34 +197,30 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 /* Galeria de Teasers com fotos borradas */
-.teaser-section { margin-top: 2.2rem; }
-.section-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.9rem;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.teaser-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
-}
-.teaser-item {
-  aspect-ratio: 3/4;
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  border: 2px solid var(--line);
-  background: linear-gradient(135deg, var(--card), var(--line));
-  display: grid; place-items: center;
-  cursor: pointer;
-}
-.teaser-item img { width: 100%; height: 100%; object-fit: cover; filter: blur(12px) brightness(0.8); }
-.teaser-item::after {
-  content: "🔒";
-  position: absolute;
-  font-size: 1.5rem;
-}
+<div class="teaser-section">
+  <div class="section-title">
+    <span>Prévia Exclusiva</span>
+    <span style="font-size: 0.8rem; color: var(--muted); font-weight: 400;">3 mídias bloqueadas</span>
+  </div>
+  <div class="teaser-grid">
+    
+    <!-- Foto 1 -->
+    <div class="teaser-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdy4rB0CybemJc6rSY5tnIUbPAoL4keO5F5zVMoh25eFym_6DUQ&s" alt="Teaser 1">
+    </div>
+
+    <!-- Foto 2 -->
+    <div class="teaser-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvz9r8seuggUFiaY__4BSMeVLS49kKXsCahsbLbirBqGdgCuT8uA&s" alt="Teaser 2">
+    </div>
+
+    <!-- Foto 3 -->
+    <div class="teaser-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXQ60tuphTEHoBlPGmwh1udjHXXxK55BUa_xgU70Vw_G4Kg9VOmg&s" alt="Teaser 3">
+    </div>
+
+  </div>
+</div>
 
 /* Gatilhos Mentais Mapeados com Bloco Expansível */
 .triggers-box {
